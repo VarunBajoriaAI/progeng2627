@@ -14,7 +14,7 @@ int main(){
 
     std::cin >> length_in >> unit_in;
     // we don't print a prompt, we just read the input
-
+    std::cout << length_in << unit_in;
     if(unit_in == "km"){
         unit_out = "mile";
         length_out = length_in / mile_to_km;
