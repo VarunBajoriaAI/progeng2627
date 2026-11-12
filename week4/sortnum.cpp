@@ -32,7 +32,7 @@ using namespace std;
     }
 }*/
 
-int s[3];
+/*int s[3];
 int sort_num(int num[3])
 {
     int count=0;
@@ -88,4 +88,35 @@ int main()
     for(int i=0;i<3;i++)
         cout<<sorted[i]<<" ";
     cout<<endl;
+}*/
+void swap(double& s1, double& s2)
+{
+    int temp=0;
+    temp=s1;
+    s1=s2;
+    s2=temp;
+}
+void sort_three_numbers(double& s1, double& s2, double& s3)
+{
+    double arr[3]= {s1,s2,s3};
+    for(int i=0;i<3;i++)
+    {
+        for(int j=i+1;j<3;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                swap(arr[i],arr[j]);
+            }
+        }
+    }
+    s1=arr[0];
+    s2=arr[1];
+    s3=arr[2];
+}
+int main()
+{
+    double s1,s2,s3;
+    cin>>s1>>s2>>s3;
+    sort_three_numbers(s1,s2,s3);
+    cout<<s1<<" "<<s2<<" "<<s3<<endl;
 }
